@@ -1,0 +1,103 @@
+javascript ARRAY practice:----
+here are 3 ways to construct array in JavaScript
+
+1-By array literal
+2-By creating instance of Array directly (using new keyword)
+3-By using an Array constructor (using new keyword)
+
+1) JavaScript array literal :: direct squre bracket used.
+  var arrayname=[value1,value2.....valueN];  
+  
+  <script>  
+      var emp=["Sonoo","Vimal","Ratan"];  
+      for (i=0;i<emp.length;i++){  
+      document.write(emp[i] + "<br/>");  
+      }  
+  </script>  
+ 
+2) JavaScript Array directly (new keyword) :: Here, new keyword is used to create instance of array.
+  var arrayname=new Array(); 
+  
+  <script>  
+      var i;  
+      var emp = new Array();  
+      emp[0] = "Arun";  
+      emp[1] = "Varun";  
+      emp[2] = "John";  
+
+      for (i=0;i<emp.length;i++){  
+      document.write(emp[i] + "<br>");  
+      }  
+ </script>  
+
+3) JavaScript array constructor (new keyword) :: Here, you need to create instance of array by passing arguments in constructor
+
+<script>  
+    var emp=new Array("Jai","Vijay","Smith");  
+    for (i=0;i<emp.length;i++){  
+    document.write(emp[i] + "<br>");  
+    }  
+</script>  
+
+ARRAY main methods used.
+
+1) array concat :: 
+
+  <script>
+    var arr1=["C","C++","Python","php"];
+    var arr2=["Java","JavaScript","Android"];
+    var result=arr1.concat(arr2);
+    document.write(result);
+ C,C++,Python,php,Java,JavaScript,Android
+//////////////////////////////////
+    var arr1=["C","C++","Python"];  
+    var arr2=["Java","JavaScript","Android"];  
+    var arr3=["Ruby","Kotlin"];  
+    var result=arr1.concat(arr2,arr3);  
+    document.writeln(result);  
+   
+////////////////////////////////////
+    var arr=["C","C++","Python"];  
+    var result= arr.concat("Java","JavaScript","Android");  
+    document.writeln(result);  
+    
+</script>
+
+2- Array find()::
+
+<script>
+    var arr=[5,22,19,25,34];
+    var result=arr.find(x=>x>20);
+    document.writeln(result)
+</script>
+
+/////////////////////////////////////////////////////////////////////////////////////
+preventDefault in javascript
+
+JSON Understand:-
+	2 main function used
+	1)JSON.stringify :- to JavaScript object into a string
+	2)JSON.parse:- to convert the string into a JavaScript object
+	
+	JSON.stringify--json to string
+	var obj = { name: "John", age: 30, city: "New York" };
+	alert(obj);
+	o/p---{"name":"John","age":30,"city":"New York"}
+	how to fetch single value eg name only then how to do in string object.
+	
+	JSON.parse ---string to json
+	let userData = '{ "name": "John", "age": 35, "isAdmin": false, "friends": [0,1,2,3] }';	//string data
+	let user = JSON.parse(userData);
+	alert( user.friends[1] );
+	o/p--- 1
+	
+	Used for PHP.
+	json_decode :- It converts a JSON encoded string into a PHP variable.--json to php
+	json_encode :- Arrays in PHP will also be converted into JSON when using the PHP function json_encode()--php to json
+
+
+	//INSHORT
+	JSON.stringify--json to string
+	JSON.parse ---string to json
+	json_decode --json to php
+	json_encode --php to json
